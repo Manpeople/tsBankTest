@@ -1,0 +1,34 @@
+//
+//  config.pch
+//  MySelfTestDemo
+//
+//  Created by 郭云峰 on 15/12/10.
+//  Copyright © 2015年 By. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef config_pch
+#define config_pch
+
+#ifdef __OBJC__
+// 如果这个全局的头文件或者宏只需要在.m或者.mm文件中使用,
+// 请把该头文件或宏写到#ifdef __OBJC__ 中
+   #import <UIKit/UIKit.h>
+   #import <Foundation/Foundation.h>
+
+#import "myconfig.h"
+#import "Masonry.h"
+
+#ifdef DEBUG
+ #define NJLog(...) NSLog(__VA_ARGS__)
+ #else
+#define NJLog(...)
+#endif
+
+ #endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* config_pch */
